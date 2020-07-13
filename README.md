@@ -12,12 +12,15 @@
 This server requires:
 
 -   PHP 7 or above
+- mysql dbms
 -   Apache web server or another web server
 -   composer
 
 step to reproduce:
 
+- create database with name `backend_service` or anything that you want
 -   just do `composer install`
+- edit `.env` files and set the database name, host, port and username accordingly
 -   then `php artisan migrate`
 -   to serve do `php artisan serve`
 
