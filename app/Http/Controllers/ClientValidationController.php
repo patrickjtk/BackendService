@@ -15,4 +15,13 @@ class ClientValidationController extends Controller
             'data' => !$result
         ]);
     }
+
+    public function existEmail(Request $request, $value) {
+        $result = User::where('email', $value)->exists();
+
+        return response()->json([
+            'message' => 'success',
+            'data' => !$result
+        ]);
+    }
 }

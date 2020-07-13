@@ -62,6 +62,7 @@ class RegisterController extends Controller
         $user = User::create($param);
 
         return response()->json([
+            'success'=>true,
             'message'=>'success',
             'data'=>$user
         ], 200);

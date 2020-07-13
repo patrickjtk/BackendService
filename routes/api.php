@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'api'], function() {
     Route::resource('register', 'RegisterController');
     Route::get('unique/mobile_no/{value}', 'ClientValidationController@existMobileNumber');
+    Route::get('unique/email/{value}', 'ClientValidationController@existEmail');
 });
